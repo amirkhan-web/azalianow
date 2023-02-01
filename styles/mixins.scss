@@ -1,0 +1,14 @@
+@mixin button($color, $background) {
+  color: $color;
+  background-color:$background;
+  border-radius: 90px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin flexbox($flex, $justify, $align) {
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+}

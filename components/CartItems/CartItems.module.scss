@@ -1,0 +1,144 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/mixins.scss';
+
+.product__item {
+  position: relative;
+  width: 332px;
+  background: $color-white;
+  border: 1px solid #F5F5F7;
+  margin: 15px;
+  padding-top: 30px;
+}
+
+.product__hit {
+  position: absolute;
+  left: 67%;
+}
+
+.product__images {
+  @include flexbox(flex, null, null);
+  margin: 0 auto;
+
+  + div {
+    padding: 0 30px;
+  }
+}
+
+.product__stars {
+  @include flexbox(flex, space-between, null);
+
+  &-reviews {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: underline;
+    color: $color-access;
+  }
+}
+
+.product__type {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $color-access;
+
+  + div {
+    @include flexbox(flex, null, center);
+
+    > svg {
+      cursor: pointer;
+    }
+
+    > svg + a {
+      margin-left: 4px;
+      margin-top: 1px;
+    }
+  }
+}
+
+.product__name {
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-dark;
+}
+
+.product__price {
+  font-weight: $fw-semibold;
+  font-size: 22px;
+  line-height: 20px;
+  color: $color-dark;
+  margin-top: 7px;
+  margin-bottom: 13px;
+
+  b {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 20px;
+    color: $color-access;
+  }
+}
+
+.product__btn {
+  position: relative;
+  font-family: $font-roboto, sans-serif;
+  z-index: 100;
+  @include button($color-white, #4056A1);
+  padding: 10px 20px;
+
+  
+  @media screen and (max-width:353px) {
+    width: 100%;      
+  }
+
+  &--cart {
+    font-family: $font-roboto, sans-serif;
+    font-weight: $fw-medium;
+    cursor: pointer;
+    color: $color-white;
+    padding: 10px 56px;
+    background: #00B177;
+    border-radius: 90px;
+    border: none;
+    outline: none;
+  }
+}
+
+.product__col {
+  @include flexbox(flex, space-between, center);
+  margin-bottom: 30px;
+
+  > div {
+    position: relative;
+    left: -15%;
+    width: 120px;
+    @include flexbox(flex, center, center);
+    padding: 8px 0;
+    padding-left: 25px;
+    background: #F5F5F7;
+    border-radius: 30px;
+
+    @media screen and (max-width:353px) {
+      display: none;
+    }
+  }
+}
+
+.product__count {
+  font-weight:$fw-medium;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-dark;
+  opacity: 0.8;
+  margin: 0 12px;
+}
+
+.product__favourite {
+  cursor: pointer;
+
+  @media screen and (max-width:353px) {
+    width: 100px;
+  }
+}

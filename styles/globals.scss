@@ -1,0 +1,33 @@
+@import './colors.scss';
+@import './fonts.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-roboto, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.fav {
+  text-align: center;
+}
+
+.fav__items {
+  text-align: center;
+}

@@ -1,0 +1,81 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/mixins.scss';
+
+.product__item {
+  position: relative;
+  width: 332px;
+  background: $color-white;
+  border: 1px solid #F5F5F7;
+  margin: 15px;
+  padding-top: 30px;
+}
+
+.product__hit {
+  position: absolute;
+  left: 67%;
+}
+
+.product__images {
+  @include flexbox(flex, null, null);
+  margin: 0 auto;
+
+  + div {
+    padding: 0 30px;
+  }
+}
+
+.product__stars {
+  @include flexbox(flex, space-between, null);
+
+  &-reviews {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: underline;
+    color: $color-access;
+  }
+}
+
+.product__type {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $color-access;
+
+  + div {
+    @include flexbox(flex, null, center);
+
+    > svg {
+      cursor: pointer;
+    }
+
+    > svg + a {
+      margin-left: 4px;
+      margin-top: 1px;
+    }
+  }
+}
+
+.product__name {
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-dark;
+}
+
+.product__price {
+  font-weight: $fw-semibold;
+  font-size: 22px;
+  line-height: 20px;
+  color: $color-dark;
+  margin-top: 7px;
+  margin-bottom: 13px;
+
+  b {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 20px;
+    color: $color-access;
+  }
+}
