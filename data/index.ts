@@ -4,7 +4,7 @@ export const data = [
     name:'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED',
     price:515,
     isHit:300,
-    images:'/../public/images/monitor.png'
+    images:'/assets/images/monitor.png'
   },
   {
     id:2,
