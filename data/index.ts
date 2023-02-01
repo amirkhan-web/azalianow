@@ -1,12 +1,14 @@
 import images from 'public/images/monitor.png'
 
-export const data = [
+console.log(images.src);
+
+export const data = [ 
   {
     id:1,
     name:'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED',
     price:515,
     isHit:300,
-    images
+    images:images.src
   },
   {
     id:2,
