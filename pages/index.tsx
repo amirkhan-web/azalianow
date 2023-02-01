@@ -3,7 +3,7 @@ import { data } from "@/data"
 
 import { CartList } from "@/components/CartList/CartList";
 import { useAppDispatch, useAppSelector } from "@/hooks";
-import { addToFavourite } from "@/redux/favourite/favouriteSlice";
+import { addToFavourite } from "@/store/favourite/favouriteSlice";
 import { TypeItems } from "@/types";
 
 export default function Home() {
@@ -18,7 +18,6 @@ export default function Home() {
     const json = JSON.stringify(favourite)
     localStorage.setItem('favourite', json)
   }, [favourite])
-
 
   return (
     <div>
