@@ -1,9 +1,10 @@
-import '@/styles/globals.scss'
+import { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 
 import store from '@/redux'
-import { useEffect, useState } from 'react';
+
+import '@/styles/globals.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showChild, setShowChild] = useState(false);

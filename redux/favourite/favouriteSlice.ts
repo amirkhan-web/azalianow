@@ -1,3 +1,4 @@
+import { getFromToLocalStorage } from './../../utils/getFromToLocalStorage';
 import { TypeItems } from '../../types/index';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
@@ -5,10 +6,8 @@ type TypeInitialList = {
   favourite:TypeItems[] 
 }
 
-const data = typeof window !== 'undefined' && localStorage.getItem('favourite')
-
 const initialState:TypeInitialList = {
-  favourite: data ? JSON.parse(data) : [],
+  favourite: getFromToLocalStorage(),
 };
 
 const favouriteSlice = createSlice({

@@ -1,22 +1,13 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import favouriteSlice from './favourite/favouriteSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import favouriteReducer from './favourite/favouriteSlice';
 
 const store = configureStore({
   reducer: {
-    favourite:favouriteSlice,
-  },
-  middleware:getDefaultMiddleware => getDefaultMiddleware({
-    serializableCheck:false
-  })
+    favourite:favouriteReducer,
+  }
 })
 
-export type AppDispatch = typeof store.dispatch
 export type RootState = ReturnType<typeof store.getState>
-export type AppThunk<ReturnType = void> = ThunkAction<
-   ReturnType,
-   RootState,
-   unknown,
-   Action<any>
- >;
+export type AppDispatch = typeof store.dispatch
 
 export default store
